@@ -38,15 +38,19 @@
   <body>
 	<a-scene museum>
 		<a-assets>	
+			<a-asset-item id="marc_aurel_gltf" src="models/marcus_aurelius_lowpoly/maurel_lowpoly.gltf"></a-asset-item>
+			<!--<a-asset-item id="pincio_statute_gltf" src="models/statue/scene.gltf"></a-asset-item>-->
 			<a-asset-item id="spotlight_gltf" src="models/spotlight/scene.gltf"></a-asset-item>
 			<a-asset-item id="commodus_gltf" src="models/commodus/scene.gltf"></a-asset-item>
 			<a-asset-item id="roman_helmet_gltf" src="models/roman_helmet/scene.gltf"></a-asset-item>
+			<!--<a-asset-item id="relief_gltf" src="models/wall_relief_from_nimrud/scene.gltf"></a-asset-item>-->
 			<a-asset-item id="fiat_falco_gltf" src="models/fiat_falco/scene.gltf"></a-asset-item>
 			<a-asset-item id="david_gltf" src="models/david/david.gltf"></a-asset-item>
 			
 			<img id="wall-texture06" src="textures/bricks.jpg">
 			<img id="floor_texture" src="textures/wood.jpg">
 			<img id="marble_texture" src="textures/marble.png">
+			<img id="concrete_texture" src="textures/concrete_seamless.jpg">
 			<img id="the_hall_texture" src="textures/the_hall.jpg">
 			
 			<a-link href="https://cecropia.github.io/thehallaframe/#" title="Crecropia's The Hall" image="#the_hall_texture"></a-link>
@@ -67,8 +71,12 @@
 			daydream-controls="right" gearvr-controls="right">
 		</a-entity>
 		
+		<!-- then somewhere inside a-scene... -->
+
 		
 		<a-entity progressive-controls="gazeMixin:mycursor;touchMixin:mytouch;override:true">
+			<!-- listing controller entities to set IDs for MoCap replay optional for normal use -->
+
 			<a-camera position="0 1.6 0" camera="active:false" look-controls="" wasd-controls="" data-aframe-inspector-original-camera="">
 				<a-entity mixin="mycursor" raycaster=""></a-entity>
 			</a-camera>
@@ -95,7 +103,7 @@
 			<a-plane src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Ffloor.jpg?1490307896453" position="0 10 0" rotation="-270 0 0" height="20" width="20"></a-plane>
 			
 			
-			<!-- Marcus Aurelius
+			<!-- Tiberius
 
 			-->			
 			<a-entity id="marcus_aurelius_container" position="3.802 0 7.544" rotation="0 -18.85 0">					
@@ -106,7 +114,7 @@
 				
 				<a-box height="0.7" width="0.7" position="0 0.5 0" src="#marble_texture" rotation="90 0 0" shadow=""></a-box>
 				
-				<a-gltf-model src="#tiberius_lowpoly_gltf" position="0 1 0" scale="0.3 0.3 0.3" rotation="0 100 0" shadow=""></a-gltf-model>
+				<a-gltf-model src="#marc_aurel_gltf" position="0 1 0" scale="0.3 0.3 0.3" rotation="0 100 0" shadow=""></a-gltf-model>
 				
 				<a-entity text="color:#222;value:Marcus Aurelius (Latin: Marcus Aurelius Antoninus Augustus 26 April 121 – 17 March 180 AD) was Roman emperor from 161 to 180, ruling jointly with Lucius Verus until Verus' death in 169 and jointly with his son, Commodus, from 177. He was the last of the so-called Five Good Emperors." scale="4 4 4" position="-1.659 2.577 0.674" rotation="0 -173.835 0"></a-entity>
 				</a-entity>
