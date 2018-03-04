@@ -1,0 +1,169 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0, 
+            "componentType" : 5123, 
+            "count" : 240015, 
+            "max" : [
+                55589
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 1, 
+            "componentType" : 5126, 
+            "count" : 55590, 
+            "max" : [
+                6439.79296875, 
+                15976.84765625, 
+                7475.9365234375
+            ], 
+            "min" : [
+                -6401.015625, 
+                -12225.74609375, 
+                -6913.20068359375
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 2, 
+            "componentType" : 5126, 
+            "count" : 55590, 
+            "max" : [
+                0.999969482421875, 
+                0.999969482421875, 
+                0.999969482421875
+            ], 
+            "min" : [
+                -0.9998779296875, 
+                -0.999908447265625, 
+                -0.999969482421875
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 3, 
+            "componentType" : 5126, 
+            "count" : 55590, 
+            "max" : [
+                0.999893069267273, 
+                0.9997220635414124, 
+                0.999977171421051, 
+                1.0
+            ], 
+            "min" : [
+                -0.999992311000824, 
+                -0.9999707341194153, 
+                -0.9998858571052551, 
+                -1.0
+            ], 
+            "type" : "VEC4"
+        }, 
+        {
+            "bufferView" : 4, 
+            "componentType" : 5126, 
+            "count" : 55590, 
+            "max" : [
+                0.9980310201644897, 
+                0.9961221825797111
+            ], 
+            "min" : [
+                0.003938999958336353, 
+                0.0025408267974853516
+            ], 
+            "type" : "VEC2"
+        }
+    ], 
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter", 
+        "version" : "2.0"
+    }, 
+    "bufferViews" : [
+        {
+            "buffer" : 0, 
+            "byteLength" : 480030, 
+            "byteOffset" : 0, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 667080, 
+            "byteOffset" : 480032, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 667080, 
+            "byteOffset" : 1147112, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 889440, 
+            "byteOffset" : 1814192, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 444720, 
+            "byteOffset" : 2703632, 
+            "target" : 34962
+        }
+    ], 
+    "buffers" : [
+        {
+            "byteLength" : 3148352, 
+            "uri" : "maurel_lowpoly.bin"
+        }
+    ], 
+    "meshes" : [
+        {
+            "name" : "marcusyy.006", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2, 
+                        "POSITION" : 1, 
+                        "TANGENT" : 3, 
+                        "TEXCOORD_0" : 4
+                    }, 
+                    "indices" : 0
+                }
+            ]
+        }
+    ], 
+    "nodes" : [
+        {
+            "mesh" : 0, 
+            "name" : "marcusyy.002", 
+            "rotation" : [
+                0.0, 
+                0.0, 
+                -1.0, 
+                -4.371138828673793e-08
+            ], 
+            "scale" : [
+                9.999999747378752e-05, 
+                9.999999747378752e-05, 
+                9.999999747378752e-05
+            ], 
+            "translation" : [
+                0.0, 
+                1.5607585906982422, 
+                0.12371271848678589
+            ]
+        }
+    ], 
+    "scene" : 0, 
+    "scenes" : [
+        {
+            "name" : "Scene", 
+            "nodes" : [
+                0
+            ]
+        }
+    ]
+}
