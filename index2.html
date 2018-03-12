@@ -90,8 +90,8 @@ AFRAME.registerInputMappings(mappings);
      <!-- Hand controls. -->
       <a-mixin id="teleport" teleport-controls="type: parabolic; cameraRig: #cameraRig; collisionEntities: [mixin='box']"></a-mixin>
 	  
-      <a-entity id="cameraRig">
-        <a-entity camera wasd-controls look-controls progressive-controls>
+      <a-entity id="cameraRig" progressive-controls="objects: a-gltf-model, a-link; maxLevel: point">
+        <a-entity camera wasd-controls look-controls >
 			<a-entity 
 				cursor="fuse: true; fuseTimeout: 500"
 				position="0 0 -1"
