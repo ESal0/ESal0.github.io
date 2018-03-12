@@ -63,20 +63,14 @@
 			<a-plane src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Ffloor.jpg?1490307896453" position="0 10 0" rotation="-270 0 0" height="20" width="20"></a-plane>
 			
 			
-			<a-entity id="cameraRig">
-        <!-- camera -->
-        <a-entity id="acamera" camera wasd-controls look-controls orbit-controls></a-entity>
-        <!-- hand controls -->
-			<a-entity id="left-hand"
-                  if-no-vr-headset="visible: false"
-                  teleport-controls="cameraRig: #cameraRig; button: trackpad; ground: #ground; hitCylinderColor: #ff3468; curveHitColor: #ff3468; curveMissColor: #333333; curveLineWidth: 0.01; hitEntity: #hitEntityLeft"
-                  ui>
-                  </a-entity>
-			<a-entity id="right-hand"
-                  if-no-vr-headset="visible: false"
-                  teleport-controls="cameraRig: #cameraRig; button: trackpad; ground: #ground; hitCylinderColor: #ff3468; curveHitColor: #ff3468; curveMissColor: #333333; curveLineWidth: 0.01; hitEntity: #hitEntityRight"
-                  ui>                  
-			</a-entity>
+			
+	<a-entity id="cameraRig">
+      <!-- camera -->
+      <a-entity id="head" camera wasd-controls look-controls></a-entity>
+      <!-- hand controls -->
+      <a-entity id="left-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+      <a-entity id="right-hand" teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head;"></a-entity>
+    </a-entity>
         </a-entity>
 			
 			<!-- Marc Aurel
