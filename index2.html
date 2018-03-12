@@ -90,8 +90,8 @@ AFRAME.registerInputMappings(mappings);
      <!-- Hand controls. -->
       <a-mixin id="teleport" teleport-controls="type: parabolic; cameraRig: #cameraRig; collisionEntities: [mixin='box']"></a-mixin>
 	  
-      <a-entity id="cameraRig" progressive-controls="">
-        <a-entity camera wasd-controls look-controls>
+      <a-entity id="cameraRig">
+        <a-entity camera wasd-controls look-controls progressive-controls>
 			<a-entity 
 				cursor="fuse: true; fuseTimeout: 500"
 				position="0 0 -1"
@@ -134,7 +134,7 @@ AFRAME.registerInputMappings(mappings);
 				</a-entity>			
 				<a-box height="0.7" width="0.7" position="0 0.5 0" src="#marble_texture" rotation="90 0 0" shadow=""></a-box>
 				
-				<a-gltf-model hoverable grabbable src="#roman_helmet_gltf" position="-0.0 1.23 0.0" scale="1 1 1" rotation="0 100 0" shadow=""></a-gltf-model>
+				<a-gltf-model grabbable src="#roman_helmet_gltf" position="-0.0 1.23 0.0" scale="1 1 1" rotation="0 100 0" shadow=""></a-gltf-model>
 				
 				<a-entity text="color:#333;value:Cassis was, next to Galea, the Latin collective name for helmets. Originally, these were roundish simple helmets of Etruscan origin, which were probably worn by the legionnaires in the early days of the Roman Empire." scale="4 4 4" position="-1.532 2.577 1.344" rotation="0 -300 0"></a-entity>
 				
