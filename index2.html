@@ -91,7 +91,14 @@ AFRAME.registerInputMappings(mappings);
       <a-mixin id="teleport" teleport-controls="type: parabolic; cameraRig: #cameraRig; collisionEntities: [mixin='box']"></a-mixin>
 	  
       <a-entity id="cameraRig" progressive-controls="">
-        <a-entity camera wasd-controls look-controls></a-entity>
+        <a-entity camera wasd-controls look-controls>
+			<a-entity 
+				cursor="fuse: true; fuseTimeout: 500"
+				position="0 0 -1"
+				geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+				material="color: black; shader: flat">
+			</a-entity>
+		</a-entity>
         <a-entity id="leftHand" mixin="teleport" vive-controls="hand: left"></a-entity>
         <a-entity id="rightHand" mixin="teleport" vive-controls="hand: right"></a-entity>
       </a-entity>
