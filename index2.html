@@ -103,12 +103,12 @@ AFRAME.registerInputMappings(mappings);
                               colliderEndEvent: collisions; colliderEndEventProperty: clearedEls;
                               colliderState:"></a-mixin>
 			
-	<a-entity progressive-controls="gazeMixin: mycursor; touchMixin: mytouch; override: true"></a-entity>
+
      <!-- Hand controls. -->
       <a-mixin id="teleport"
         teleport-controls="type: parabolic; cameraRig: #cameraRig; collisionEntities: [mixin='box']"
       ></a-mixin>
-      <a-entity id="cameraRig">
+      <a-entity id="cameraRig" progressive-controls="gazeMixin: mycursor; touchMixin: mytouch; override: true">
         <a-entity camera wasd-controls look-controls></a-entity>
         <a-entity id="leftHand" mixin="teleport" vive-controls="hand: left"></a-entity>
         <a-entity id="rightHand" mixin="teleport" vive-controls="hand: right"></a-entity>
