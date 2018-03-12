@@ -9,7 +9,7 @@
     <script src="https://rawgit.com/chenzlabs/auto-detect-controllers/master/dist/aframe-auto-detect-controllers-component.min.js"></script>
 	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
 	<script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
-	<script src="mobilescript.js"></script>	
+	<!--<script src="mobilescript.js"></script>	-->
 			
 	
   </head>
@@ -46,8 +46,6 @@
 				<a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="-3 0 0" color="#39BB82"></a-cylinder>
 			</a-entity>
 		
-			<a-entity progressive-controls></a-entity>
-		
 			<a-entity clickable link="href: https://cecropia.github.io/thehallaframe/#; title: Cecropia's The Hall; image: #the_hall_texture" position="-4 1.5 -9.2" rotation="0 0 0"></a-entity>
 		
 			<!-- Wände -->
@@ -69,18 +67,16 @@
         <!-- camera -->
         <a-entity id="acamera" camera wasd-controls look-controls orbit-controls></a-entity>
         <!-- hand controls -->
-        <a-entity id="left-hand"
-                  brush
+			<a-entity id="left-hand"
                   if-no-vr-headset="visible: false"
                   teleport-controls="cameraRig: #cameraRig; button: trackpad; ground: #ground; hitCylinderColor: #ff3468; curveHitColor: #ff3468; curveMissColor: #333333; curveLineWidth: 0.01; hitEntity: #hitEntityLeft"
                   ui>
                   </a-entity>
-        </a-entity>
-        <a-entity id="right-hand"
-                  brush
+			<a-entity id="right-hand"
                   if-no-vr-headset="visible: false"
                   teleport-controls="cameraRig: #cameraRig; button: trackpad; ground: #ground; hitCylinderColor: #ff3468; curveHitColor: #ff3468; curveMissColor: #333333; curveLineWidth: 0.01; hitEntity: #hitEntityRight"
                   ui>                  
+			</a-entity>
         </a-entity>
 			
 			<!-- Marc Aurel
