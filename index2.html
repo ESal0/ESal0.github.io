@@ -7,9 +7,33 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
 	<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>	
     <script src="https://rawgit.com/chenzlabs/auto-detect-controllers/master/dist/aframe-auto-detect-controllers-component.min.js"></script>
-	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
+	<script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>	
 	<script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
-	<script src="mobilescript.js"></script>	
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script>
+	<!--<script src="mobilescript.js"></script>	-
+	<script>
+		var mappings = {
+  mappings: {
+    default: {
+      common: {
+        trackpaddown: 'teleportstart',
+        trackpadup: 'teleportend'
+      },
+      'oculus-touch-controls': {
+        thumbstickdown: 'teleportstart',
+        thumbstickup: 'teleportend'
+      },
+      keyboard: {
+        't_down': 'teleportstart',
+        't_up': 'teleportend'
+      }
+    }
+  }
+};
+
+AFRAME.registerInputMappings(mappings);
+	
+	</script>-->
 			
 	
   </head>
@@ -40,13 +64,11 @@
 
 
 		<a-entity id="room 1">
-			<a-entity position="1 0 1">
+			<!--<a-entity position="1 0 1">
 				<a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="0 0 -5.2" color="#39BB82"></a-cylinder>
 				<a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="3 0 0" color="#39BB82"></a-cylinder>
 				<a-cylinder checkpoint="offset: 0 1.6 0" radius="1" height="0.1" position="-3 0 0" color="#39BB82"></a-cylinder>
-			</a-entity>
-		
-			<a-entity progressive-controls></a-entity>
+			</a-entity>-->
 		
 			<a-entity clickable link="href: https://cecropia.github.io/thehallaframe/#; title: Cecropia's The Hall; image: #the_hall_texture" position="-4 1.5 -9.2" rotation="0 0 0"></a-entity>
 		
@@ -64,24 +86,23 @@
       </a-entity>
 			<a-plane src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Ffloor.jpg?1490307896453" position="0 10 0" rotation="-270 0 0" height="20" width="20"></a-plane>
 			
-			
-			<a-entity id="cameraRig">
-        <!-- camera -->
-        <a-entity id="acamera" camera wasd-controls look-controls orbit-controls></a-entity>
-        <!-- hand controls -->
-        <a-entity id="left-hand"
-                  brush
-                  if-no-vr-headset="visible: false"
-                  teleport-controls="cameraRig: #cameraRig; button: trackpad; ground: #ground; hitCylinderColor: #ff3468; curveHitColor: #ff3468; curveMissColor: #333333; curveLineWidth: 0.01; hitEntity: #hitEntityLeft"
-                  ui>
-                  </a-entity>
-        </a-entity>
-        <a-entity id="right-hand"
-                  brush
-                  if-no-vr-headset="visible: false"
-                  teleport-controls="cameraRig: #cameraRig; button: trackpad; ground: #ground; hitCylinderColor: #ff3468; curveHitColor: #ff3468; curveMissColor: #333333; curveLineWidth: 0.01; hitEntity: #hitEntityRight"
-                  ui>                  
-        </a-entity>
+
+     <!-- Hand controls. -->
+      <a-mixin id="teleport" teleport-controls="type: parabolic; cameraRig: #cameraRig; collisionEntities: [mixin='box']"></a-mixin>
+	  
+      <a-entity id="cameraRig" progressive-controls="objects: a-gltf-model, a-link; maxLevel: point">
+        <a-entity camera wasd-controls look-controls >
+			<a-entity 
+				cursor="fuse: true; fuseTimeout: 500"
+				position="0 0 -1"
+				geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+				material="color: black; shader: flat">
+			</a-entity>
+		</a-entity>
+        <a-entity id="leftHand" mixin="teleport" vive-controls="hand: left"></a-entity>
+        <a-entity id="rightHand" mixin="teleport" vive-controls="hand: right"></a-entity>
+      </a-entity>
+
 			
 			<!-- Marc Aurel
 
@@ -113,7 +134,7 @@
 				</a-entity>			
 				<a-box height="0.7" width="0.7" position="0 0.5 0" src="#marble_texture" rotation="90 0 0" shadow=""></a-box>
 				
-				<a-gltf-model hoverable grabbable src="#roman_helmet_gltf" position="-0.0 1.23 0.0" scale="1 1 1" rotation="0 100 0" shadow=""></a-gltf-model>
+				<a-gltf-model grabbable src="#roman_helmet_gltf" position="-0.0 1.23 0.0" scale="1 1 1" rotation="0 100 0" shadow=""></a-gltf-model>
 				
 				<a-entity text="color:#333;value:Cassis was, next to Galea, the Latin collective name for helmets. Originally, these were roundish simple helmets of Etruscan origin, which were probably worn by the legionnaires in the early days of the Roman Empire." scale="4 4 4" position="-1.532 2.577 1.344" rotation="0 -300 0"></a-entity>
 				
