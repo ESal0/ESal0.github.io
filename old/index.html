@@ -29,7 +29,7 @@
 			<img id="concrete_texture" src="textures/concrete_seamless.jpg">
 			<img id="the_hall_texture" src="textures/the_hall.jpg">
 			
-			<a-link href="https://cecropia.github.io/thehallaframe/#" title="Crecropia's The Hall" image="#the_hall_texture"></a-link>
+			<a-link href="https://cecropia.github.io/thehallaframe/#" title="Cecropia's The Hall" image="#the_hall_texture"></a-link>
 			
 		</a-assets>
 
@@ -55,9 +55,9 @@
 		</a-entity>
 		
 		<a-entity camera universal-controls="movementControls:checkpoint" checkpoint-controls="mode:animate"></a-entity>
+		
 		<!--Light-->
 		<a-light type="ambient" color="#a4b4b1" intensity="1"></a-light>
-		<!--<a-light type="directional" color="#aaa" intensity="1"></a-light>-->
 
 
 		<a-entity id="room 1">
@@ -80,8 +80,7 @@
 			<a-plane src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Ffloor.jpg?1490307896453" position="0 10 0" rotation="-270 0 0" height="20" width="20"></a-plane>
 			
 			
-			<!-- Marc Aurelius
-			40,494
+			<!-- Marc Aurel
 
 			-->			
 			<a-entity id="marcus_aurelius_container" position="3.802 0 7.544" rotation="0 -18.85 0">					
@@ -98,8 +97,9 @@
 			</a-entity>
 				
 				
+				
 			<!-- Helm
-				1,400
+
 
 			-->
 			<a-entity id="romanHelmet_container" position="-6.801 0 -6.544">
@@ -110,7 +110,7 @@
 				</a-entity>			
 				<a-box height="0.7" width="0.7" position="0 0.5 0" src="#marble_texture" rotation="90 0 0" shadow=""></a-box>
 				
-				<a-gltf-model grabbable src="#roman_helmet_gltf" position="-0.0 1.23 0.0" scale="1 1 1" rotation="0 100 0" shadow=""></a-gltf-model>
+				<a-gltf-model hoverable grabbable src="#roman_helmet_gltf" position="-0.0 1.23 0.0" scale="1 1 1" rotation="0 100 0" shadow=""></a-gltf-model>
 				
 				<a-entity text="color:#333;value:Cassis was, next to Galea, the Latin collective name for helmets. Originally, these were roundish simple helmets of Etruscan origin, which were probably worn by the legionnaires in the early days of the Roman Empire." scale="4 4 4" position="-1.532 2.577 1.344" rotation="0 -300 0"></a-entity>
 				
@@ -118,9 +118,7 @@
 			</a-entity>			
 			
 			<!-- Commodus
-				
-				41,600
-			
+
 			-->
 			<a-entity id="commodus_container" position="8.469 0 4.814" rotation="0 -107.888 0">
 					
@@ -134,8 +132,11 @@
 				
 			</a-entity>
 			
+			
+			
+			
 			<!-- Fiat Falco
-				46,300
+
 			
 			-->
 			<a-entity id="fiat_falco_container" position="8 3.815 -7.5" rotation="0 -45 0">	
@@ -144,15 +145,16 @@
 					<a-entity light="penumbra:0.58;intensity:1.38;decay:2.1;angle:17.78;type:spot;castShadow:true" position="0.997 -0.203 -0.25" rotation="40.623 178.59 -10.371"></a-entity>
 				</a-entity>			
 
-				<a-gltf-model grabbable src="#fiat_falco_gltf" scale="4 4 4" position="0 -2.5 1.5"></a-gltf-model>
+				<a-gltf-model src="#fiat_falco_gltf" scale="4 4 4" position="0 -2.5 1.5"></a-gltf-model>
 				<a-entity text="color:#222;value:The Fiat CR.42 Falco (Falcon, plural: Falchi) was a single-seat sesquiplane fighter developed and produced by Italian aircraft manufacturer Fiat Aviazione. It served primarily in Italy's Regia Aeronautica both before and during the Second World War." scale="4 4 4" position="-2.871 -0.8 2.821" rotation="0 26.24 0"></a-entity>
 				
 			</a-entity>
 			
 			<!-- David
-				27,441
+				
+				
 			-->
-			<a-entity id="david_container" position="-6.144 1 6.6" rotation="0 87.090 0">
+			<a-entity id="davic_container" position="-6.144 1 6.6" rotation="0 87.090 0">
 				
 				<a-entity position="5.626 9 5.032" rotation="20.397297506657306 -129.327 -174.9813106329534" id="lamp nissan">
 					<a-gltf-model src="#spotlight_gltf" position="1 0 0" shadow=""></a-gltf-model>
@@ -160,7 +162,6 @@
 				</a-entity>				
 				<a-gltf-model src="#david_gltf" position="0 -1 0" rotation="0 90 0" scale="2 2 2" ></a-gltf-model>
 				<a-entity text="color:#333;value:David is a masterpiece of Renaissance sculpture created in marble between 1501 and 1504 by Michelangelo. David is a 5.17-metre (17.0 ft) marble statue of a standing male nude. The statue represents the Biblical hero David, a favoured subject in the art of Florence." scale="4 4 4" position="3.136 0 -3.233" rotation="0 6.5 0"></a-entity>
-				
 			</a-entity>			
 		</a-entity>	
     </a-scene>
@@ -171,59 +172,5 @@
 
 
 <!--
-				<a-box height="11.44" width="3.15" position="-0.04 5.13 0.12" rotation="0.55 -0.19 90" src="#concrete_texture" repeat="10 10" material="repeat:1 1" scale="1 0.41 0.24"></a-box>
-				<a-box height="12.4" width="12.4" position="-3.326 1.19 -0.849" rotation="0 -42.27 90" src="#concrete_texture" repeat="10 10" material="repeat:1 1" scale="1 0.26 0.24"></a-box>
-				<a-box height="9.82" width="5" position="0 -3.73 -0.55" rotation="90.31 -0.48 -0.52" src="#concrete_texture" repeat="10 10" material="repeat:1 1" scale="1 0.26 0.24"></a-box>
-				<a-box height="9.82" width="5" position="0 -3.832 0.43" rotation="91.73 -0.57 -0.38" src="#concrete_texture" repeat="1010" material="repeat:1 1" scale="1 0.26 0.24"></a-box>
-				<a-box height="12.010" width=12.010" position="3.198 1.2 -0.851" rotation="0 46.4 90" src="#concrete_texture" repeat="10 10" material="repeat:1 1" scale="1 0.26 0.24"></a-box>
-			
-
-			<a-entity>
-				<a-gltf-model src="#spotlight_gltf" position="1 3 1" scale="1 1 1" shadow=""></a-gltf-model>
-				<a-entity light="angle:26.89;decay:0.62;intensity:1.04;penumbra:0.84;type:spot;castShadow:true" position="0.982 2.912 0.835" rotation="13.464508185574346 179.22119831692152 5.614986392282068"></a-entity>
-			</a-entity>
-			
-			
-	<script src="https://unpkg.com/aframe-navigation/dist/aframe-navigation.min.js"></script>
-	
-	
-
-		<a-box height="75" width="10" position="0 0 -25" rotation="0 0 90" color="#8a6642"></a-box>
-	<a-box height="75" width="10" position="0 0 25" rotation="0 0 90" color="#8a6642"></a-box>
-	<a-box height="75" width="10" position="25 0 10" rotation="0 90 90" color="#8a6642"></a-box>
-	<a-box height="75" width="10" position="-25 0 -10" rotation="0 90 90" color="#8a6642"></a-box>
 		
-		
-		
-		<a-asset-item id="cityModel-obj" src="/akropolis/akropolis_rework.obj"></a-asset-item>
-        <a-asset-item id="cityModel-mtl" src="/akropolis/akropolis_rework.mtl"></a-asset-item>
-		
-        <a-asset-item id="model" src="https://cdn.rawgit.com/KhronosGroup/glTF-Sample-Models/7268f989/2.0/2CylinderEngine/glTF/2CylinderEngine.gltf"></a-asset-item>
-		
-		<a-asset-item id="akro_gltf" src="/akropolis/akropolis_rework.gltf"></a-asset-item>
-		
-		<a-asset-item id="scifihelmet_gltf" src="/scifi_helmet/scifihelmet.gltf"></a-asset-item>
-		
-		<a-asset-item id="buggy_gltf" src="/buggy/buggy.gltf"></a-asset-item>
-		
-		<a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/virtualcity/VC.gltf"></a-asset-item>
-		<a-asset-item id="cityModel" src="city_model/VC.gltf"></a-asset-item>
-		
-
-
-
-
-
-
-		<a-sky color=#ccc ></a-sky>
-		  <a-sky src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg" radius="50"></a-sky>
-		  <a-box src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Ftexture.jpg?1490308149272" position="-2 0.5 -4"></a-box>
-		  <a-sphere src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Fcubes.jpg?1490308405745" radius="0.5" position="0 0.5 -3"></a-sphere>
-		  <a-cone src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Fcone.jpg?1490308535937" height="2" radius-top="0.1" position="0 1 -6"></a-cone>
-		  <a-entity obj-model="obj: #cityModel-obj; mtl: #cityModel-mtl" scale="0.01 0.01 0.01></a-entity>
-		  <a-entity gltf-model="#scifihelmet_gltf"></a-entity>
-		  <a-entity gltf-model="#buggy_gltf"></a-entity>
-  
-			<a-entity gltf-model="#cityModel"></a-entity>
-			<a-entity gltf-model="#box_gltf"></a-entity>
-	  -->
+-->
